@@ -1,3 +1,4 @@
+/* Base styles */
 body {
     background-color: #ffebdf;
     margin: 0;
@@ -48,7 +49,7 @@ nav a:hover {
 }
 
 main {
-    padding: 180px 20px 20px; /* pushed down to avoid being hidden by fixed header */
+    padding: 180px 5% 20px; /* pushed down to avoid being hidden by fixed header */
     max-width: 800px;
     margin: auto;
     border-radius: 8px;
@@ -70,7 +71,7 @@ ul li {
 
 form {
     background-color: #ffebdf;
-    padding: 5px;
+    padding: 10px;
     border-radius: 8px;
 }
 
@@ -103,10 +104,9 @@ footer {
     background-color: #2E2E2E;
     color: #ffebdf;
     height: 50px;                                       
-    font-size: 0,05pt;
+    font-size: 0.8em;
     z-index: 999;
 }
-
 
 .social-links {
     margin-top: 10px;
@@ -122,4 +122,71 @@ footer {
 
 .social-links a:hover {
     color: #fff;
+}
+
+/* Media Queries for responsiveness */
+
+/* For small screens, adjust the header and profile pic */
+@media screen and (max-width: 768px) {
+    header {
+        padding-left: 20px; /* Reduce space for smaller screens */
+        text-align: center; /* Center header text */
+    }
+
+    .profile-pic {
+        width: 100px; /* Adjust size for small screens */
+        height: 100px;
+        top: 15px;
+        left: 15px;
+    }
+
+    main {
+        padding: 140px 5% 20px; /* Adjust top padding */
+    }
+
+    footer {
+        font-size: 0.8em; /* Smaller footer text */
+        height: 60px; /* Ensure it still fits on small screens */
+    }
+}
+
+/* For very small screens (like mobile), adjust fonts and layout */
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: 0.7em; /* Further reduce font size */
+    }
+
+    input[type="submit"] {
+        font-size: 1em; /* Adjust button size */
+        padding: 10px 15px; /* Make it more touch-friendly */
+    }
+
+    .profile-pic {
+        width: 80px; /* Adjust profile pic size */
+        height: 80px;
+        top: 10px;
+        left: 10px;
+    }
+
+    main {
+        padding: 120px 5% 20px; /* Further reduce top padding */
+    }
+
+    nav {
+        display: block; /* Stack navigation links */
+        text-align: center;
+    }
+
+    nav a {
+        margin: 10px 0; /* Add space between links */
+        display: block;
+    }
+
+    .social-links {
+        margin-top: 5px;
+    }
+
+    .social-links a {
+        font-size: 1.2em; /* Adjust icon size */
+    }
 }
